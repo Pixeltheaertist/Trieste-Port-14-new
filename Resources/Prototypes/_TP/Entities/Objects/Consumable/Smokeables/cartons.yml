@@ -1,0 +1,30 @@
+- type: entity
+  id: CigCartonWeh
+  parent: [ BoxCardboard, BaseBagOpenClose ]
+  name: Weh Smokes carton
+  description: "A carton containing 6 packets of Weh Smokes. It looks expensive. wehwehwehwehweh"
+  components:
+  - type: Sprite
+    sprite: _TP/Objects/Consumable/Smokes/carton/wehsmokecarton.rsi
+    layers:
+      - state: closed
+        map: ["closeLayer"]
+      - state: open
+        map: ["openLayer"]
+  - type: Item
+    sprite: _TP/Objects/Consumable/Smokes/carton/wehsmokecarton.rsi
+    size: Normal
+  - type: Storage
+    grid:
+    - 0,0,4,1
+  - type: StorageFill
+    contents:
+      - id: CigPackWeh
+        amount: 5
+  - type: Tag
+    tags:
+    - Trash
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+  - type: SpaceGarbage
