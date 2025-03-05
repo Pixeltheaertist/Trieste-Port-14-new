@@ -18,6 +18,13 @@ using Robust.Shared.Player;
 using Content.Shared.Weather;
 using Robust.Shared.Audio.Systems;
 
+//summary
+// This system utilizes an update loop to time a death rain storm, which will kill all players not inside a designated safezone (see RainShelterComponent).
+// Only creatures or objects with RainCrushableComponent will be affected by the rain. Anything caught in the rain is deleted.
+// It also applies a screen shake before the rain arrives, as well as an audio cue.
+// Creatures with RainImmuneComponent are safe and cannot be crushed. (This is for creatures that are children of a crushable entity)
+//summary
+
 
 namespace Content.Server._TP.Weather;
 
@@ -30,7 +37,9 @@ public sealed class DeathRainSystem : EntitySystem
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
+    // Interval in which rain will occur
     private const float UpdateInterval = 20f;
+    // Interval in which rumbling and screenshake will occur
     private const float RumbleInterval = 10;
 
     private float _updateTimer = 0f;
@@ -41,6 +50,7 @@ public sealed class DeathRainSystem : EntitySystem
         base.Initialize();
     }
 
+    // Initate the update loop
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
@@ -49,12 +59,14 @@ public sealed class DeathRainSystem : EntitySystem
 
         if (_updateTimer >= RumbleInterval)
         {
-
+            // for all entities that can be crushed, display screenshake and audio
           foreach (var rumbler in EntityManager.EntityQuery<RainCrushableComponent>())
             {
+                // shake the screen
                 var rumble = rumbler.Owner;
                 var kick = new Vector2(_random.NextFloat(), _random.NextFloat()) * 2f;
                 _sharedCameraRecoil.KickCamera(rumble, kick);
+                // spam audio
                 _audio.PlayPvs("/Audio/Ambience/Objects/gravity_gen_hum.ogg", rumble);
             }
         }
@@ -73,7 +85,7 @@ public sealed class DeathRainSystem : EntitySystem
                     // This creature is innately immune to rain. Spared.
                      continue;
                 }
-
+                // find all shelters, and see if the entity is in range of at least one shelter
                 var shelters = GetEntityQuery<RainShelterComponent>();
                 foreach (var shelter in _lookup.GetEntitiesInRange(entityUid, 1f))
                 {
@@ -88,6 +100,7 @@ public sealed class DeathRainSystem : EntitySystem
                 // Not in shelter. Bye bye. Say hi to the void for me.
 
                 // _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("meltdown-alert-warning"), component.title, announcementSound: component.MeltdownSound, colorOverride: component.Color);
+                // Deletes the entity unfortunate to be caught in the rain
                 QueueDel(entityUid);
                 }
             }
