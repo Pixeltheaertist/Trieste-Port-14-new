@@ -11,6 +11,12 @@ using Content.Server.Administration.Logs;
 
 namespace Content.Server.Deathwhale;
 
+//summary
+// This system controls deathwhale hunting behavior. Namely, the ability for the deathwhale to consume anyone caught in it's range of light.
+// If a edible player is caught in range of a deathwhale's searchlight, it will be caught and deleted.
+// TODO: Needs refactor before bigger implementation. Should use a fulton style animation, and teleport the player to a indestructible "stomach"
+//summary
+
 public sealed class DeathWhaleSystem : EntitySystem
 {
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
