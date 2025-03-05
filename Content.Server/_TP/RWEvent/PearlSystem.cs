@@ -20,6 +20,11 @@ using Content.Server.TP.Event.Components;
 
 namespace Content.Server.TP.Event.Systems;
 
+//summary
+// This system allows the use of "pearls" to store data when interacted with. The pearls operate similarly to paper, however can store much more information.
+// Pearls are harder to write on, too, requiring separate tools to write and read respectively.
+//summary
+
 public sealed class PearlScannerSystem : EntitySystem
 {
     [Dependency] private readonly UseDelaySystem _useDelay = default!;
