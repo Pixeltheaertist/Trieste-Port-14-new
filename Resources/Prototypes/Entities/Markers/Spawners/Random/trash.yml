@@ -20,7 +20,7 @@
       - id: FoodPacketSusTrash
       - id: FoodPacketSyndiTrash
       - id: BrokenBottle
-      - id: TP14CigPackWehTrash
+      - id: TP14TP14CigPackWehTrash
     - !type:GroupSelector
       weight: 5
       children:
