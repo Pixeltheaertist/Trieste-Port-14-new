@@ -1,5 +1,5 @@
 - type: entity
-  id: AltarWeh
+  id: TP14AltarWeh
   parent: AltarBase
   name: weh altar
   components:
