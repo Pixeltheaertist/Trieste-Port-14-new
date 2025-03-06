@@ -521,8 +521,8 @@ public sealed class ArrivalsSystem : EntitySystem
     _mapSystem.CreateMap(out var mapId1, runMapInit: false);
     Log.Info($"Created map {mapId1} for sweetwater");
     var mapUid1 = _mapSystem.GetMap(mapId1);
-
-    if (!_loader.TryLoadGrid(mapId1, path, out var grid))
+            
+    if (!_loader.TryLoad(mapId1, path, out var grid))
     {
         Log.Error("Sweetwater grid has failed to load");
         return;
@@ -542,7 +542,7 @@ public sealed class ArrivalsSystem : EntitySystem
 
     Log.Info($"Loading Waste Zone map ID {mapId2}");
 
-    if (!_loader.TryLoadGrid(mapId2, path2, out var grid2))
+    if (!_loader.TryLoad(mapId2, path2, out var grid2))
     {
         Log.Error("Waste Zone failed to load");
         return;
