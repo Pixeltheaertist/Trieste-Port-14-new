@@ -1,5 +1,5 @@
 - type: entity
-  id: CigCartonWeh
+  id: TP14CigCartonWeh
   parent: [ BoxCardboard, BaseBagOpenClose ]
   name: Weh Smokes carton
   description: "A carton containing 6 packets of Weh Smokes. It looks expensive. wehwehwehwehweh"
@@ -19,7 +19,7 @@
     - 0,0,4,1
   - type: StorageFill
     contents:
-      - id: CigPackWeh
+      - id: TP14CigPackWeh
         amount: 5
   - type: Tag
     tags:

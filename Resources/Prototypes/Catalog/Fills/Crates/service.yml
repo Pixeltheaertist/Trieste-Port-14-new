@@ -78,7 +78,7 @@
         orGroup: Cigars
       - id: Matchbox
         amount: 2
-      - id: CigCartonWeh
+      - id: TP14CigCartonWeh
         prob: 0.25
 
 - type: entity
