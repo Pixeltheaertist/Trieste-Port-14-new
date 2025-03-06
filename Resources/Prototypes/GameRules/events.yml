@@ -155,13 +155,13 @@
 
 - type: entity
   parent: BaseGameRule
-  id: DragonSpawn
+  id: DragonSpawn # FOUND YOUUUUUU
   components:
   - type: StationEvent
-    weight: 6.5
+    weight: 7.5
     earliestStart: 40
     reoccurrenceDelay: 20
-    minimumPlayers: 20
+    minimumPlayers: 40 # yay
     duration: null
   - type: SpaceSpawnRule
     spawnDistance: 0

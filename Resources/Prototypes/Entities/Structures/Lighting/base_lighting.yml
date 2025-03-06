@@ -438,6 +438,30 @@
         Heat: 2
     popupText: powered-light-component-burn-hand
 
+- type: entity
+  id: PoweredSmallLightWaterProof
+  suffix: Waterproof
+  parent: PoweredSmallLightEmpty
+  components:
+  - type: Sprite
+    state: base
+  - type: PointLight
+    enabled: true
+  - type: PoweredLight
+    hasLampOnSpawn: LightBulb
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 2
+    popupText: powered-light-component-burn-hand
+  - type: InGas
+    gasId: 9
+    damagedByGas: false # waterproof
+    gasThreshold: 75
+    damage:
+      types:
+        Blunt: 3
+
 #Emergency Lights
 - type: entity
   id: EmergencyLight

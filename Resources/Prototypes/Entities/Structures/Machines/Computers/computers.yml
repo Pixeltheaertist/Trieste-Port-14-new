@@ -1351,3 +1351,15 @@
     platformWhitelist:
       components:
       - BellPlatform
+
+- type: entity
+  parent: BaseComputerBell
+  id: ComputerTrench
+  name: trench bell control console
+  description: Operates the Trench exploration bell.
+  components:
+  - type: BellConsole
+    dockTag: DockTrench
+    platformWhitelist:
+      components:
+      - TrenchPlatform

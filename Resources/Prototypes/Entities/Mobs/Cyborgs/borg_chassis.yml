@@ -48,6 +48,10 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: mining
+  - type: InGas
+    gasId: 9
+    damagedByGas: false
+    gasThreshold: 50
 
 - type: entity
   id: BorgChassisEngineer
@@ -56,10 +60,6 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: engineering
-  - type: InGas
-    gasId: 9
-    damagedByGas: false
-    gasThreshold: 50
 
 - type: entity
   id: BorgChassisJanitor

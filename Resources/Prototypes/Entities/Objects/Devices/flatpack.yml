@@ -239,7 +239,7 @@
 ##CHEM LAB STUFF
 
 - type: entity
-  parent: BaseFlatpack
+  parent: FaxMachineFlatpack
   id: ReagentGrinderFlatpack
   name: fax machine flatpack
   description: A flatpack used for constructing a reagent grinder.
@@ -248,7 +248,7 @@
     entity: KitchenReagentGrinder
 
 - type: entity
-  parent: BaseFlatpack
+  parent: FaxMachineFlatpack
   id: HotplateFlatpack
   name: fax machine flatpack
   description: A flatpack used for constructing a hotplate.
@@ -257,7 +257,7 @@
     entity: ChemistryHotplate
 
 - type: entity
-  parent: BaseFlatpack
+  parent: FaxMachineFlatpack
   id: CentrifugeFlatpack
   name: fax machine flatpack
   description: A flatpack used for constructing a centrifuge.

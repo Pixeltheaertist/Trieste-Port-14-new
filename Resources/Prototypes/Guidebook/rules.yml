@@ -394,6 +394,9 @@
   text: "/ServerInfo/Guidebook/ServerRules/MRPRules/RuleM0.xml"
   children:
   - RuleM1
+  - RuleM3
+  - RuleM6
+  - RuleM8
 
 - type: guideEntry
   id: RuleM1
@@ -401,6 +404,28 @@
   ruleEntry: true
   priority: 10
   text: "/ServerInfo/Guidebook/ServerRules/MRPRules/RuleM1DoNotPowergame.xml"
+
+- type: guideEntry
+  id: RuleM3
+  name: guide-entry-rules-m3
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/ServerRules/MRPRules/RuleM3Metagame.xml"
+
+- type: guideEntry
+  id: RuleM6
+  name: guide-entry-rules-m6
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/ServerRules/MRPRules/RuleM6.xml"
+
+- type: guideEntry
+  id: RuleM8
+  name: guide-entry-rules-m8
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/ServerRules/MRPRules/RuleM8.xml"
+
 
 - type: guideEntry
   id: SpaceLaw

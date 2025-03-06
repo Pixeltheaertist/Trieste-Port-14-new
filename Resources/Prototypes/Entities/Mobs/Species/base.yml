@@ -191,6 +191,13 @@
   - type: Speech
     speechSounds: Alto
   - type: DamageForceSay
+  - type: InGas
+    gasId: 9 # short-circuits in water
+    damagedByGas: false
+    gasThreshold: 9999
+    damage:
+      types:
+        Shock: 5
   - type: Vocal
     sounds:
       Male: MaleHuman

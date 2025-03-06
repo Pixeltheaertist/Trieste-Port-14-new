@@ -36,7 +36,7 @@ public sealed partial class AtmosphereSystem
            return;
        }
 
-       var mixtures = new GasMixture[9];
+       var mixtures = new GasMixture[10];
        for (var i = 0; i < mixtures.Length; i++)
            mixtures[i] = new GasMixture(Atmospherics.CellVolume) { Temperature = Atmospherics.T20C };
 
@@ -71,6 +71,10 @@ public sealed partial class AtmosphereSystem
 
        // 8: Nitrogen (101kpa) for vox rooms
        mixtures[8].AdjustMoles(Gas.Nitrogen, Atmospherics.MolesCellStandard);
+
+       // 9: Trench Water (extremely high pressure for bottom of The Trench)
+       mixtures[9].AdjustMoles(Gas.Water, Atmospherics.TrenchMolesStandard);
+       mixtures[9].Temperature = 20f;
 
        foreach (var arg in args)
        {

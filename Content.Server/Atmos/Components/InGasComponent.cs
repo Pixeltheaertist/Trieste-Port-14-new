@@ -26,6 +26,19 @@ public sealed partial class InGasComponent : Component
     [DataField("gasThreshold"), ViewVariables(VVAccess.ReadWrite)]
     public float GasThreshold = 0.1f;
 
+
+    ///  <summary>
+    ///     The amount of water around the user
+    /// </summary>
+    [DataField]
+    public float WaterAmount = 0f;
+
+    ///  <summary>
+    ///     The crush depth (water) the user can be in. (how much water they can handle before catastrophic death)
+    /// </summary>
+    [DataField("crushDepth"), ViewVariables(VVAccess.ReadWrite)]
+    public float CrushDepth = 1000;
+
     /// <summary>
     ///   Whether the entity is damaged by water.
     ///   By default things are not

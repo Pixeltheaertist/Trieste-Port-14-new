@@ -55,6 +55,9 @@
   id: DockBell
 
 - type: Tag
+  id: DockTrench
+
+- type: Tag
   id: Bedsheet
 
 - type: Tag

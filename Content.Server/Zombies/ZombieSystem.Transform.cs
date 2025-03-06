@@ -2,6 +2,7 @@ using Content.Server.Atmos.Components;
 using Content.Server.Body.Components;
 using Content.Server.Chat;
 using Content.Server.Chat.Managers;
+using Content.Server.Chemistry.EntitySystems;
 using Content.Server.Ghost.Roles.Components;
 using Content.Server.Humanoid;
 using Content.Server.IdentityManagement;
@@ -105,6 +106,7 @@ public sealed partial class ZombieSystem
         RemComp<ReproductivePartnerComponent>(target);
         RemComp<LegsParalyzedComponent>(target);
         RemComp<ComplexInteractionComponent>(target);
+        RemComp<JellidComponent>(target);
 
         //funny voice
         var accentType = "zombie";

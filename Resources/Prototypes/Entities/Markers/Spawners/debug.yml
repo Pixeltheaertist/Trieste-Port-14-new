@@ -20,8 +20,8 @@
   suffix: blocks rain
   components:
   - type: Sprite
-    layers:
-    - state: green
+    sprite: Markers/inside.rsi
+    state: default
   - type: BlockWeather
   placement:
     mode: SnapgridCenter

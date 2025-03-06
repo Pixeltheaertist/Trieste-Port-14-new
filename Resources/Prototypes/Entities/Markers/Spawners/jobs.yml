@@ -94,7 +94,7 @@
   name: basintechnician
   components:
   - type: SpawnPoint
-    job_id: BasinTechnician
+    job_id: BasinEngi
   - type: Sprite
     layers:
       - state: green

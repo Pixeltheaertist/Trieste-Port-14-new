@@ -63,7 +63,7 @@
 - type: reaction
   id: DermalineDenaturing
   impact: Low
-  minTemp: 450
+  minTemp: 600
   reactants:
     Dermaline:
       amount: 1
@@ -183,7 +183,7 @@
 - type: reaction
   id: LeporazineDenaturing
   impact: Low
-  minTemp: 450
+  minTemp: 600
   reactants:
     Leporazine:
       amount: 1
@@ -348,7 +348,7 @@
 - type: reaction
   id: PyrazineDenaturing
   impact: Low
-  minTemp: 550
+  minTemp: 590
   reactants:
     Pyrazine:
       amount: 1

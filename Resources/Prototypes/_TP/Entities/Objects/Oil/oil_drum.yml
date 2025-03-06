@@ -1,0 +1,30 @@
+- type: entity
+  name: oil drum
+  parent: BaseItem
+  description: Used to store liquid gold
+  id: BaseOilDrum
+  components:
+  - type: Sprite
+    sprite: _TP/Structures/Storage/Drums.rsi
+    noRot: true
+    layers:
+      - state: crude
+  - type: SolutionContainerManager
+    solutions:
+      tank:
+        maxVol: 1000
+  - type: ExaminableSolution
+    solution: tank
+  - type: SolutionItemStatus
+    solution: tank
+  - type: Item
+    size: Ginormous
+  - type: RefillableSolution
+    solution: tank
+  - type: DrainableSolution
+    solution: tank
+  - type: SolutionTransfer
+    canChangeTransferAmount: true
+  - type: FitsInPumpjack
+
+      

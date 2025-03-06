@@ -113,7 +113,7 @@
           shader: unshaded
         - sprite: Markers/atmos.rsi
           shader: unshaded # }
-          state: plasma
+          state: watervapour
     - type: AtmosFixMarker
       mode: 7
 
@@ -124,4 +124,22 @@
   description: "Nitrogen @ 101 kPa, 20C"
   components:
   - type: AtmosFixMarker
-    mode: 7
+    mode: 8
+
+- type: entity
+  name: Atmos Fix Abyss Marker
+  suffix: (Extremely High Pressure, Trench)
+  id: TP14AtmosFixWaterTrenchMarker
+  description: "Water @ trench pressure, T20C"
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - sprite: Markers/atmos.rsi # {
+          state: base
+          shader: unshaded
+        - sprite: Markers/atmos.rsi
+          shader: unshaded # }
+          state: plasma
+    - type: AtmosFixMarker # EXTREMELY high pressure. Only abyssal suits will prevent you from being popped like a balloon.
+      mode: 9

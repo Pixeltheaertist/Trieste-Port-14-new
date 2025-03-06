@@ -78,9 +78,11 @@ namespace Content.Shared.Atmos
         public const float OxygenStandard = 0.21f;
         public const float NitrogenStandard = 0.79f;
         public const float WaterStandard = 7.0f;
+        public const float TrenchStandard = 20.0f;
         public const float OxygenMolesStandard = MolesCellStandard * OxygenStandard;
         public const float NitrogenMolesStandard = MolesCellStandard * NitrogenStandard;
         public const float WaterMolesStandard = MolesCellStandard * WaterStandard;
+        public const float TrenchMolesStandard = MolesCellStandard * TrenchStandard;
 
         #endregion
 

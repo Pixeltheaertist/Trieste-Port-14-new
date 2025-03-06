@@ -20,8 +20,8 @@
     rechargeCooldown: 0.5
   - type: BasicEntityAmmoProvider
     proto: BulletTrident
-    capacity: 2
-    count: 2
+    capacity: 1
+    count: 1
   - type: MeleeWeapon
     attackRate: 1.5
     wideAnimationRotation: -135

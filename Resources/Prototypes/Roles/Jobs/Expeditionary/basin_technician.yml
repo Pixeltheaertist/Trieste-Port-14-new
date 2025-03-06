@@ -1,14 +1,15 @@
+# ID is set to 'BasinEngi' as 'BasinTech' will break the loadout screen for whatever reason. -Cookie
 - type: job
-  id: BasinTechnician
+  id: BasinEngi
   name: job-name-basintech
   description: job-description-basintech
-  playTimeTracker: JobBasintECH
+  playTimeTracker: JobBasinTech
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Cargo
-      time: 3600 # 1 hr
+     department: Cargo
+     time: 3600 # 1 hr
   icon: "JobIconShaftMiner"
-  startingGear: BasinTechGear
+  startingGear: PilotGear_2
   supervisors: job-supervisors-qm
   access:
   - Salvage
@@ -16,10 +17,26 @@
   - External
 
 - type: startingGear
-  id: BasinTechGear
+  id: PilotGear_2
   equipment:
     jumpsuit: ClothingUniformJumpsuitSalvageSpecialist
     id: BasinTechPDA
     ears: ClothingHeadsetCargo
-    shoes: ClothingShoesLeather
+    eyes: ClothingEyesGlassesMeson
+    gloves: ClothingHandsGlovesColorYellow
+    shoes: ClothingShoesBootsSalvage
+    back: ClothingBackpackSatchelLeather
+    belt: ClothingBeltUtilityEngineering
+
+- type: roleLoadout
+  id: JobBasinEngi
+  groups:
+  - GroupTankHarness
+  - SalvageSpecialistBackpack
+  - SalvageSpecialistOuterClothing
+  - SalvageSpecialistShoes
+  - Glasses
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
 
