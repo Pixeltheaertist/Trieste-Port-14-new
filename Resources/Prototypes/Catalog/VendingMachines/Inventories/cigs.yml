@@ -14,5 +14,7 @@
     CheapLighter: 4
     Lighter: 2
     FlippoLighter: 2
+  contrabandInventory:
+   TP14CigPackWeh: 2 #Weh! Command like's to keep these expensive cigeretes hidden from the rest of the peasants, so they can enjoy them in peace.
   emaggedInventory:
     CigPackSyndicate: 1

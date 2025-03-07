@@ -298,7 +298,7 @@
   parent: BasePlushie
   id: PlushieLizard #Weh!
   name: lizard plushie
-  description: An adorable stuffed toy that resembles a lizardperson. Made by CentComm as a token initiative to combat speciesism in work environments. "Welcome your new colleagues as you do this plush, with open arms!"
+  description: An adorable stuffed toy that resembles a lizardperson. Made by Weston Exotic Herbals for religious and recreational purposes! "Weh!" #TP, modified weh lizard description to fit the server better. New lores!
   components:
   - type: Sprite
     sprite: Objects/Fun/toys.rsi

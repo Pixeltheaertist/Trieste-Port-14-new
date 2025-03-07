@@ -1,0 +1,30 @@
+- type: entity
+  id: TP14CigPackWeh
+  parent: CigPackBase
+  name: Weh Smoke packet
+  description: These smokes look expensive, a label on the packaging reads, Stop grinding up innocent weh plushies, now you can WEH with Weston Exotic Herbals-brand smokeables! Glory to WEH!
+  components:
+  - type: Sprite
+    sprite: _TP/Objects/Consumable/Smokes/packs/wehsmokes.rsi
+  - type: Item
+    sprite: _TP/Objects/Consumable/Smokes/packs/wehsmokes.rsi
+  - type: StorageFill
+    contents:
+    - id: TP14CigaretteWeh
+      amount: 10
+
+- type: entity
+  name: Empty Weh Smoke packet
+  parent: BaseItem
+  id: TP14TP14CigPackWehTrash
+  description: A weh smoke packet that has been emptied of its contents. It's trash now.
+  components:
+  - type: Sprite
+    sprite: _TP/Objects/Consumable/Smokes/packs/wehsmokes.rsi
+    state: trash
+  - type: Tag
+    tags:
+    - Trash
+  - type: SpaceGarbage
+  - type: StaticPrice
+    price: 0
