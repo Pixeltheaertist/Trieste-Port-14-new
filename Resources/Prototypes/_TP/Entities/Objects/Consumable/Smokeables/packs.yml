@@ -16,7 +16,7 @@
 - type: entity
   name: Empty Weh Smoke packet
   parent: BaseItem
-  id: TP14TP14CigPackWehTrash
+  id: TP14CigPackWehTrash
   description: A weh smoke packet that has been emptied of its contents. It's trash now.
   components:
   - type: Sprite
