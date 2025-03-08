@@ -413,6 +413,13 @@
   text: "/ServerInfo/Guidebook/ServerRules/_TP/MRPRules/RuleM3Metagame.xml"
 
 - type: guideEntry
+  id: RuleM4
+  name: guide-entry-rules-m4
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/ServerRules/_TP/MRPRules/RuleM4NormalPerson.xml"
+
+- type: guideEntry
   id: RuleM6
   name: guide-entry-rules-m6
   ruleEntry: true
